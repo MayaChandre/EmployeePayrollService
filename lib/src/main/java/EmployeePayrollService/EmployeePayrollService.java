@@ -12,8 +12,8 @@ public class EmployeePayrollService {
 
 	}
 
-	public EmployeePayrollService(ArrayList<EmployeePayrollData> employeePayrollDataList2) {
-		this.employeePayrollDataList = employeePayrollDataList2;
+	public EmployeePayrollService(List<EmployeePayrollData> employeePayrollDataList) {
+		this.employeePayrollDataList = employeePayrollDataList;
 	}
 
 	private void readEmployeePayrollData(Scanner sc) {
@@ -22,9 +22,9 @@ public class EmployeePayrollService {
 		sc.nextLine();
 		System.out.println("Enter employee name: ");
 		String name = sc.nextLine();
-		System.out.println("Enetr Employee salary: ");
+		System.out.println("Eneter Employee salary: ");
 		double salary = sc.nextDouble();
-		EmployeePayrollData.add(new EmployeePayrollData(name, id, salary));
+		employeePayrollDataList.add(new EmployeePayrollData(name, id, salary));
 
 	}
 
@@ -39,5 +39,4 @@ public class EmployeePayrollService {
 		employeePayrollService.readEmployeePayrollData(sc);
 		employeePayrollService.writeEmployeePayrollData();
 	}
-
 }

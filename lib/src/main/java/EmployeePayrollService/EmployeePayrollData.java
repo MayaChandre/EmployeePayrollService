@@ -34,6 +34,11 @@ public class EmployeePayrollData {
 	public static void add(EmployeePayrollData employeePayrollData) {
 		
 	}
+	@Override
+	public String toString() {
+		return "EmployeePayrollData [name=" + name + ", id=" + id + ", salary=" + salary + "]";
+	}
+	
 	
 
 }
